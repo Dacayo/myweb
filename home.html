@@ -22,7 +22,7 @@
     <div class="photo-container">
         <div class="photo1">
             <div class="inside-photo">
-                <img src="images/photo1.jpg" alt="">
+                <!-- <img src="images/photo1.jpg" alt=""> -->
             </div>
             <div class="inside-photos">
                 <img src="" alt="">
@@ -50,10 +50,31 @@
         </div>
     </div>
 
-    <audio id="backgroundMusic" loop>
+    <audio id="backgroundMusic" autoplay loop>
         <source src="audio/pahintulot.mp3" type="audio/mpeg">
     </audio>
 
-    <script src="script.js"></script>
+    <script>
+        const music = document.getElementById("backgroundMusic");
+        const playBtn = document.getElementById("playBtn");
+
+        playBtn.addEventListener("click", () => {
+
+            if (music.paused) {
+                music.play();
+            } 
+            else {
+                music.pause();
+            }
+        });
+
+        music.addEventListener("play", () => {
+            playBtn.textContent = "||";
+        });
+
+        music.addEventListener("pause", () => {
+            playBtn.textContent = "▶";
+        });
+    </script>
 </body>
 </html>

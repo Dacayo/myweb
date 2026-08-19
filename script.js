@@ -45,10 +45,10 @@ playBtn.addEventListener("click", () => {
 
     if (music.paused) {
         music.play();
-    } else {
+    } 
+    else {
         music.pause();
     }
-
 });
 
 music.addEventListener("play", () => {
