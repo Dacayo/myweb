@@ -38,17 +38,23 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
 });
 
-const music = document.getElementById("music");
+const music = document.getElementById("backgroundMusic");
 const playBtn = document.getElementById("playBtn");
 
 playBtn.addEventListener("click", () => {
 
     if (music.paused) {
         music.play();
-        playBtn.textContent = "Ⅱ";
     } else {
         music.pause();
-        playBtn.textContent = "▶";
     }
 
+});
+
+music.addEventListener("play", () => {
+    playBtn.textContent = "Ⅱ";
+});
+
+music.addEventListener("pause", () => {
+    playBtn.textContent = "▶";
 });
