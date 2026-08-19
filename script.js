@@ -37,3 +37,18 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     }
 
 });
+
+const music = document.getElementById("music");
+const playBtn = document.getElementById("playBtn");
+
+playBtn.addEventListener("click", () => {
+
+    if (music.paused) {
+        music.play();
+        playBtn.textContent = "Ⅱ";
+    } else {
+        music.pause();
+        playBtn.textContent = "▶";
+    }
+
+});

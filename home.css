@@ -78,4 +78,61 @@
         width: 80%;
         margin-top: -50px;
     }
+
+    .music-container {
+        margin: 10px;
+        margin-top: 80px;
+        height: 170px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(55, 56, 56);
+        border-radius: 10px;
+        gap: 10px;
+    }
+
+    .music-img {
+        background-color: aqua;
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+    }
+
+    .music-img img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .music-info {
+        width: 220px;
+        height: 150px;
+        font-family: Poppins;
+    }
+
+    .music-info h3 {
+        margin-top: 20px;
+        margin-left: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+    }
+
+    .music-info p {
+        margin-left: 10px;
+        font-size: 13px;
+        color: white;
+    }
+
+    .play-btn {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+    }
+
+
+
+
 }
