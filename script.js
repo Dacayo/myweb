@@ -13,48 +13,29 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
         document.getElementById("password").value;
 
 
-    if (username === "" || password === "") {
+    
 
-        alert("Please enter your username and password.");
-
+    if (username !== "" && password === "") {
+        alert("Please enter your password");
         return;
     }
 
-
-    if (
-        username === correctUsername &&
-        password === correctPassword
-    ) {
-
-        alert("Login successful!");
-
-        window.location.href = "home.html";
-
-    } else {
-
-        alert("Incorrect username or password.");
-
+    else if (username === "" && password !== "") {
+        alert("Please enter your username");
+        return;
     }
 
-});
+    else if (username === "" && password === "") {
+        alert("Please enter your username and password.");
+        return;
+    }
 
-const music = document.getElementById("backgroundMusic");
-const playBtn = document.getElementById("playBtn");
-
-playBtn.addEventListener("click", () => {
-
-    if (music.paused) {
-        music.play();
+    if (username === correctUsername &&
+        password === correctPassword) {
+        window.location.href = "home.html";
     } 
     else {
-        music.pause();
+        alert("Incorrect username or password.");
     }
-});
 
-music.addEventListener("play", () => {
-    playBtn.textContent = "Ⅱ";
-});
-
-music.addEventListener("pause", () => {
-    playBtn.textContent = "▶";
 });

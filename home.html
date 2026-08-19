@@ -45,9 +45,17 @@
             <p>Shirebound and busking</p>
 
             <div class="play-btn">
-                <button id="playBtn" type="button">▶</button>
+                <button id="playBtn" type="button">
+                    <img id="playIcon" src="images/play-button.png" alt="">
+                </button>
             </div>
         </div>
+    </div>
+
+    <div class="button-container">
+        <button id="album" class="btn">SEE ALBUM</button>
+        <button id="reason" class="btn">secret</button>
+        <button id="candid" class="btn">secret</button>
     </div>
 
     <audio id="backgroundMusic" autoplay loop>
@@ -57,6 +65,7 @@
     <script>
         const music = document.getElementById("backgroundMusic");
         const playBtn = document.getElementById("playBtn");
+        const playIcon = document.getElementById("playIcon");
 
         playBtn.addEventListener("click", () => {
 
@@ -69,11 +78,11 @@
         });
 
         music.addEventListener("play", () => {
-            playBtn.textContent = "||";
+            playIcon.src = "images/pause.png";
         });
 
         music.addEventListener("pause", () => {
-            playBtn.textContent = "▶";
+            playIcon.src = "images/play-button.png";;
         });
     </script>
 </body>
